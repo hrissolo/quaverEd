@@ -12,13 +12,6 @@ for (let i=0; i < speechArray.length; i++) {
     }
 }
 
-console.log(`The speech has ${speechArray.length} words. 
-we found words starting with T ${counterT} times`)
-
-
-document.getElementById("wordCounter").innerHTML = counterT;
-
-
 let counterE = 0;
 for (let i=0; i < speechArray.length; i++) {
     if (speechArray[i].endsWith("e")) {
@@ -29,4 +22,9 @@ for (let i=0; i < speechArray.length; i++) {
     }
 }
 
-console.log(`ends with E ${counterE}`)
+
+const wordCountTest = `The speech has ${speechArray.length} words. <br>
+There are ${counterT} words starting with the letter T. <br>
+There are ${counterE} words ending with the letter E.`
+
+document.getElementById("wordCounter").innerHTML = wordCountTest;
